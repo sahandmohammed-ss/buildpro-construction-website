@@ -1,0 +1,209 @@
+.main {
+  min-height: 100vh;
+  background: #0a0a0a;
+  color: #fff;
+  padding-bottom: 4rem;
+}
+
+.navWrapper {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 100;
+}
+
+.container {
+  max-width: 1600px;
+  margin: 0 auto;
+  padding: 0 2rem 4rem;
+}
+
+/* Cinematic Header */
+.header {
+  height: 50vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  margin-bottom: 4rem;
+  padding-top: 6rem; /* Space for navbar */
+}
+
+.title {
+  font-size: 6rem;
+  font-weight: 900;
+  color: #fff;
+  line-height: 0.9;
+  letter-spacing: -0.04em;
+  margin-bottom: 2rem;
+  background: linear-gradient(to bottom, #fff, #666);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.subtitle {
+  font-size: 1.5rem;
+  color: var(--accent-bronze);
+  max-width: 600px;
+  line-height: 1.6;
+}
+
+.filterContainer {
+  display: flex;
+  gap: 1rem;
+  margin-top: 3rem;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.filterButton {
+  background: transparent;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  color: var(--text-secondary);
+  padding: 0.8rem 1.5rem;
+  border-radius: 9999px;
+  cursor: pointer;
+  font-family: var(--font-display);
+  font-size: 0.9rem;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  transition: all 0.3s ease;
+}
+
+.filterButton:hover {
+  border-color: var(--accent-bronze);
+  color: #fff;
+}
+
+.activeFilter {
+  background: var(--accent-bronze);
+  border-color: var(--accent-bronze);
+  color: var(--bg-void);
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2rem;
+  min-height: 500px; /* Prevent layout shift */
+}
+
+/* Wrapper for framer motion layout animations */
+.projectWrapper {
+  /* display: contents; Removed to allow transform animations on the wrapper */
+  position: relative;
+}
+
+.card {
+  position: relative;
+  border-radius: 12px;
+  overflow: hidden;
+  cursor: pointer;
+  height: 450px;
+  display: block;
+  transition: transform 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+/* Featured item spans 2 rows - ONLY for 'All' view logic if needed, 
+   but with filtering it's safer to keep uniform or handle dynamically.
+   For now, we'll keep uniform height for filtered views to avoid gaps.
+*/
+.card {
+  height: 450px;
+}
+
+.imageWrapper {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+
+.image {
+  object-fit: cover;
+  transition: transform 1s ease;
+  will-change: transform;
+}
+
+.card:hover .image {
+  transform: scale(1.1);
+}
+
+.cardOverlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(to top, rgba(0,0,0,0.9), transparent);
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  padding: 3rem;
+  opacity: 0;
+  transform: translateY(20px);
+  transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.card:hover .cardOverlay {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.projectTitle {
+  font-size: 2.5rem;
+  color: #fff;
+  margin-bottom: 0.5rem;
+  font-weight: 700;
+  transform: translateY(10px);
+  transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+  transition-delay: 0.1s;
+}
+
+.card:hover .projectTitle {
+  transform: translateY(0);
+}
+
+.projectCategory {
+  color: var(--accent-bronze);
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  font-size: 0.9rem;
+  transform: translateY(10px);
+  transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+  transition-delay: 0.2s;
+  opacity: 0;
+}
+
+.card:hover .projectCategory {
+  transform: translateY(0);
+  opacity: 1;
+}
+
+@media (max-width: 1024px) {
+  .title {
+    font-size: 5rem;
+  }
+  
+  .grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 768px) {
+  .title {
+    font-size: 3.5rem;
+  }
+  
+  .grid {
+    grid-template-columns: 1fr;
+  }
+  
+  .filterContainer {
+    gap: 0.5rem;
+  }
+  
+  .filterButton {
+    padding: 0.6rem 1rem;
+    font-size: 0.8rem;
+  }
+}

@@ -1,0 +1,28 @@
+{
+  "testimonials": [
+    {
+      "id": 1,
+      "quote": "BuildPro transformed our vision into reality. The Obsidian Tower stands as a testament to their unparalleled expertise in modern architecture.",
+      "author": "Jennifer Walsh",
+      "position": "CEO, TechCorp Industries",
+      "rating": 5,
+      "project": "The Obsidian Tower"
+    },
+    {
+      "id": 2,
+      "quote": "Working with BuildPro was a seamless experience. Their attention to sustainability and cutting-edge design exceeded all our expectations.",
+      "author": "Michael Torres",
+      "position": "Director, GreenSpace Developments",
+      "rating": 5,
+      "project": "Bronze Residence"
+    },
+    {
+      "id": 3,
+      "quote": "The team's dedication to quality and innovation is unmatched. They delivered our headquarters on time and beyond our wildest dreams.",
+      "author": "Sophia Laurent",
+      "position": "Founder, Carbon Innovations",
+      "rating": 5,
+      "project": "Carbon HQ"
+    }
+  ]
+}

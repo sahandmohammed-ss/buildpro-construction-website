@@ -1,0 +1,64 @@
+.cursor {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 20px;
+  height: 20px;
+  border: 1px solid var(--accent-bronze);
+  border-radius: 50%;
+  pointer-events: none;
+  z-index: 9999;
+  mix-blend-mode: normal;
+}
+
+.follower {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 8px;
+  height: 8px;
+  background-color: var(--accent-bronze);
+  border-radius: 50%;
+  pointer-events: none;
+  z-index: 9999;
+  mix-blend-mode: normal;
+}
+
+@media (hover: none) {
+  .cursor, .follower {
+    display: none;
+  }
+}
+
+/* Custom Cursor Classes */
+
+/* Use this when background is Gold/Bronze to make cursor visible (White) */
+.contrast {
+  border-color: #FFFFFF;
+  mix-blend-mode: normal;
+}
+
+.follower.contrast {
+  background-color: #FFFFFF;
+}
+
+/* Use this when background is Light to make cursor visible (Black) */
+.dark {
+  border-color: #000000;
+  mix-blend-mode: normal;
+}
+
+.follower.dark {
+  background-color: #000000;
+}
+
+/* Restore the difference blend mode if needed */
+.difference {
+  border-color: var(--accent-bronze);
+  mix-blend-mode: difference;
+}
+
+.follower.difference {
+  background-color: var(--accent-bronze);
+  mix-blend-mode: difference;
+}

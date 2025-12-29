@@ -1,0 +1,198 @@
+.nav {
+  position: fixed;
+  z-index: var(--z-sticky);
+  left: 50%;
+  transform: translateX(-50%);
+  width: auto;
+  transition: all 0.5s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+/* Desktop: Top Center */
+@media (min-width: 769px) {
+  .nav {
+    top: 2rem;
+  }
+}
+
+/* Mobile: Bottom Center (Dock Style) */
+@media (max-width: 768px) {
+  .nav {
+    top: auto;
+    bottom: 2rem;
+    width: 90%;
+    max-width: 400px;
+  }
+}
+
+.container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 2rem;
+  padding: 0.75rem 1.5rem;
+  
+  /* Glassmorphism */
+  background: rgba(10, 10, 10, 0.6);
+  backdrop-filter: blur(12px) saturate(180%);
+  -webkit-backdrop-filter: blur(12px) saturate(180%);
+  
+  /* Pill Shape */
+  border-radius: 100px;
+  
+  /* Borders & Glows */
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  box-shadow: 
+    0 20px 40px -10px rgba(0, 0, 0, 0.5),
+    0 0 0 1px rgba(0, 0, 0, 0.2),
+    inset 0 1px 0 rgba(255, 255, 255, 0.1);
+    
+  transition: all 0.4s ease;
+}
+
+/* Mobile Specific Container Tweaks */
+@media (max-width: 768px) {
+  .container {
+    padding: 0.75rem 1.25rem;
+    justify-content: space-between;
+    background: rgba(10, 10, 10, 0.8); /* Slightly darker on mobile for contrast */
+    border-top: 1px solid rgba(255, 255, 255, 0.15); /* Glass Edge */
+    box-shadow: 
+      0 10px 30px -10px rgba(0, 0, 0, 0.8),
+      0 0 20px rgba(192, 160, 98, 0.05); /* Subtle Gold Glow */
+  }
+}
+
+.logo {
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: 1.25rem;
+  letter-spacing: -0.02em;
+  color: var(--text-primary);
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+}
+
+.logoAccent {
+  color: var(--accent-bronze);
+}
+
+.links {
+  display: flex;
+  gap: 0.5rem;
+  align-items: center;
+}
+
+.link {
+  position: relative;
+  font-size: 0.875rem;
+  font-weight: 500;
+  color: rgba(255, 255, 255, 0.6);
+  text-decoration: none;
+  padding: 0.5rem 1rem;
+  border-radius: 100px;
+  transition: all 0.3s ease;
+}
+
+.link:hover {
+  color: var(--accent-bronze);
+  background: rgba(192, 160, 98, 0.08);
+  text-shadow: 0 0 12px rgba(192, 160, 98, 0.4);
+}
+
+/* Active State (Simulated for now, usually handled by class logic) */
+.link:active {
+  transform: scale(0.95);
+}
+
+.actions {
+  display: flex;
+  align-items: center;
+}
+
+/* Mobile Menu Toggle */
+.menuToggle {
+  display: none;
+  background: none;
+  border: none;
+  color: var(--text-primary);
+  cursor: pointer;
+  padding: 0.5rem;
+}
+
+@media (max-width: 768px) {
+  .links {
+    display: none; /* Hide standard links on mobile, use menu or dock icons if requested */
+  }
+  
+  /* For this specific request, the user mentioned "Content: Links for Projects, Services..." 
+     If they want these visible in the dock, we should show them. 
+     However, usually a dock has icons. 
+     Let's keep the hamburger for now as the prompt implies a "Navbar" but positioned at bottom.
+     Wait, prompt says "Content: Links for...". 
+     Let's try to fit them or keep the hamburger if space is tight. 
+     For a "Dock", usually items are visible. 
+     Let's hide the desktop text links and show the hamburger for the full menu, 
+     OR if the user wants a true dock, we'd need icons. 
+     Given "Links for Projects...", text might be too wide for mobile.
+     I will keep the hamburger for mobile to access the full menu, 
+     BUT the prompt says "Mobile... easy for thumbs". 
+     Maybe I should show the links? 
+     Let's stick to the hamburger for safety on small screens unless I add icons.
+     Actually, let's enable the hamburger to open the menu.
+  */
+  .menuToggle {
+    display: block;
+  }
+  
+  .actions {
+    display: none;
+  }
+}
+
+/* Mobile Menu Overlay */
+.mobileMenu {
+  position: fixed;
+  bottom: 6rem; /* Above the dock */
+  left: 50%;
+  transform: translateX(-50%);
+  width: 90%;
+  max-width: 400px;
+  background: rgba(15, 15, 15, 0.9);
+  backdrop-filter: blur(16px);
+  border-radius: 24px;
+  padding: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  box-shadow: 0 10px 40px rgba(0,0,0,0.5);
+  z-index: 90;
+  
+  /* Animation */
+  animation: slideUp 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+@keyframes slideUp {
+  from { opacity: 0; transform: translate(-50%, 20px); }
+  to { opacity: 1; transform: translate(-50%, 0); }
+}
+
+.mobileLink {
+  font-size: 1.1rem;
+  color: var(--text-primary);
+  padding: 0.75rem;
+  text-align: center;
+  border-radius: 12px;
+  transition: background 0.2s;
+}
+
+.mobileLink:hover {
+  background: rgba(255, 255, 255, 0.05);
+  color: var(--accent-bronze);
+}
+
+.mobileBtn {
+  width: 100%;
+}
+

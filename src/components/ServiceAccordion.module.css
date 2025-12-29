@@ -1,0 +1,99 @@
+.section {
+  padding: 8rem 0;
+  background-color: var(--bg-panel); /* Lighter than void for contrast */
+  position: relative;
+  z-index: 5; /* Ensure it sits above potential overlaps */
+}
+
+.heading {
+  font-size: 1rem;
+  color: var(--accent-bronze);
+  margin-bottom: 4rem;
+  letter-spacing: 0.2em;
+  padding-left: 2rem;
+}
+
+.list {
+  border-top: 1px solid rgba(255,255,255,0.1);
+}
+
+.item {
+  border-bottom: 1px solid rgba(255,255,255,0.1);
+  cursor: pointer;
+  transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+  position: relative;
+}
+
+.item:hover {
+  background-color: rgba(255,255,255,0.03);
+  padding-left: 1rem; /* Subtle shift */
+  border-left: 2px solid var(--accent-bronze); /* Bronze accent on hover */
+}
+
+.header {
+  display: flex;
+  align-items: center;
+  padding: 2rem;
+}
+
+.id {
+  font-family: var(--font-display);
+  color: var(--text-muted);
+  font-size: 1.2rem;
+  margin-right: 4rem;
+}
+
+.title {
+  font-size: 3rem;
+  color: var(--text-primary);
+  flex: 1;
+  transition: color 0.3s ease;
+}
+
+.item:hover .title {
+  color: var(--accent-bronze);
+}
+
+.icon {
+  color: var(--text-secondary);
+  transition: transform 0.3s ease;
+}
+
+.item:hover .icon {
+  color: var(--text-primary);
+}
+
+.contentWrapper {
+  overflow: hidden;
+}
+
+.description {
+  padding: 0 2rem 2rem 7rem; /* Align with title */
+  font-size: 1.2rem;
+  color: var(--text-secondary);
+  max-width: 800px;
+  line-height: 1.6;
+  overflow-wrap: break-word;
+  word-wrap: break-word;
+  hyphens: auto;
+}
+
+@media (max-width: 768px) {
+  .header {
+    padding: 1.5rem;
+  }
+  
+  .id {
+    margin-right: 1.5rem;
+    font-size: 1rem;
+  }
+  
+  .title {
+    font-size: 1.5rem;
+  }
+  
+  .description {
+    padding: 0 1.5rem 1.5rem 1.5rem;
+    font-size: 1rem;
+  }
+}

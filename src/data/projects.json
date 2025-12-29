@@ -1,0 +1,91 @@
+{
+  "projects": [
+    {
+      "id": "obsidian-tower",
+      "title": "The Obsidian Tower",
+      "category": "Commercial",
+      "year": "2024",
+      "location": "Downtown Metropolis",
+      "client": "TechCorp Industries",
+      "image": "/images/architecture-landscape.jpg",
+      "description": "A 60-story architectural masterpiece that redefines the city skyline.",
+      "shortDescription": "A 60-story architectural masterpiece",
+      "challenge": "Design a carbon-neutral high-rise that maximizes natural light while maintaining energy efficiency in a dense urban environment.",
+      "solution": "Implemented a revolutionary double-skin facade system with integrated solar panels and smart glass technology that adjusts opacity based on sun position.",
+      "results": [
+        "85% reduction in energy consumption compared to traditional buildings",
+        "LEED Platinum certification achieved",
+        "50,000 sq ft of premium office space"
+      ],
+      "images": [
+        "/images/architecture-landscape.jpg",
+        "/images/exterior-of-the-building-1.jpg"
+      ]
+    },
+    {
+      "id": "bronze-residence",
+      "title": "Bronze Residence",
+      "category": "Residential",
+      "year": "2023",
+      "location": "Hillside Estate",
+      "client": "Private Client",
+      "image": "/images/luxury-house-9-1.jpg",
+      "description": "Luxury modern living that harmonizes with nature.",
+      "shortDescription": "Luxury modern living",
+      "challenge": "Create a contemporary home that integrates seamlessly with the natural hillside terrain while providing panoramic views.",
+      "solution": "Cantilevered design with floor-to-ceiling glass walls and bronze metal accents that complement the surrounding landscape.",
+      "results": [
+        "Won 2023 Residential Architecture Award",
+        "Featured in Architectural Digest",
+        "100% renewable energy powered"
+      ],
+      "images": [
+        "/images/luxury-house-9-1.jpg"
+      ]
+    },
+    {
+      "id": "void-bridge",
+      "title": "Void Bridge",
+      "category": "Infrastructure",
+      "year": "2024",
+      "location": "River Canyon",
+      "client": "City Infrastructure Department",
+      "image": "/images/exterior-of-the-building-1.jpg",
+      "description": "Engineering innovation spanning 2 miles.",
+      "shortDescription": "Engineering innovation",
+      "challenge": "Design a pedestrian bridge that can withstand extreme weather while minimizing environmental impact on the canyon ecosystem.",
+      "solution": "Tensile cable-stayed structure using recycled steel with integrated LED lighting powered by kinetic energy from foot traffic.",
+      "results": [
+        "Spans 2 miles across river canyon",
+        "Zero carbon footprint during operation",
+        "Handles 10,000 pedestrians daily"
+      ],
+      "images": [
+        "/images/exterior-of-the-building-1.jpg",
+        "/images/daniel-chen-cNaEqXSsZ0k-unsplash.jpg"
+      ]
+    },
+    {
+      "id": "carbon-hq",
+      "title": "Carbon HQ Building",
+      "category": "Commercial",
+      "year": "2024",
+      "location": "Innovation District",
+      "client": "Carbon Innovations",
+      "image": "/images/daniel-chen-cNaEqXSsZ0k-unsplash.jpg",
+      "description": "Our flagship sustainable headquarters.",
+      "shortDescription": "Sustainable headquarters",
+      "challenge": "Design a corporate headquarters that serves as a living laboratory for sustainable building technologies.",
+      "solution": "Integrated biophilic design with vertical gardens, rainwater harvesting, and AI-driven climate control systems.",
+      "results": [
+        "100% carbon neutral operations",
+        "Produces 120% of its energy needs",
+        "Living laboratory for sustainable tech"
+      ],
+      "images": [
+        "/images/daniel-chen-cNaEqXSsZ0k-unsplash.jpg",
+        "/images/051Edited-no-address-1200x790.jpg"
+      ]
+    }
+  ]
+}

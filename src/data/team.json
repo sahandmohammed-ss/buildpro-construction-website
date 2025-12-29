@@ -1,0 +1,40 @@
+{
+  "team": [
+    {
+      "id": 1,
+      "name": "Sarah Mitchell",
+      "role": "Chief Architect",
+      "image": "/images/team/expressive-pretty-woman-posing.jpg",
+      "bio": "20+ years shaping skylines",
+      "email": "sarah@buildpro.com",
+      "linkedin": "https://linkedin.com/in/sarahmitchell"
+    },
+    {
+      "id": 2,
+      "name": "Marcus Chen",
+      "role": "Lead Engineer",
+      "image": "/images/team/close-up-portrait-curly-handsome-european-male.jpg",
+      "bio": "Structural innovation expert",
+      "email": "marcus@buildpro.com",
+      "linkedin": "https://linkedin.com/in/marcuschen"
+    },
+    {
+      "id": 3,
+      "name": "Elena Rodriguez",
+      "role": "Sustainability Director",
+      "image": "/images/team/portrait-expressive-young-woman.jpg",
+      "bio": "Green building pioneer",
+      "email": "elena@buildpro.com",
+      "linkedin": "https://linkedin.com/in/elenarodriguez"
+    },
+    {
+      "id": 4,
+      "name": "James Park",
+      "role": "Project Manager",
+      "image": "/images/team/confident-attractive-caucasian-guy-beige-pullon-smiling-broadly-while-standing-against-gray.jpg",
+      "bio": "Delivering excellence on time",
+      "email": "james@buildpro.com",
+      "linkedin": "https://linkedin.com/in/jamespark"
+    }
+  ]
+}
