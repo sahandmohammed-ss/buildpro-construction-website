@@ -15,6 +15,7 @@
   transition: color 0.3s ease;
   border: none;
   outline: none;
+  white-space: nowrap;
 }
 
 .content {
